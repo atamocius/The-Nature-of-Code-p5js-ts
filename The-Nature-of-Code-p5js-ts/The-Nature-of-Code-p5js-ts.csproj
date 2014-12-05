@@ -18,12 +18,12 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="app.css" />
-    <Content Include="index.html" />
+    <Content Include="Test\index.html" />
+    <Content Include="Scripts\p5\addons\p5.dom.js" />
+    <Content Include="Scripts\p5\addons\p5.sound.js" />
+    <Content Include="Scripts\p5\p5.js" />
+    <Content Include="Scripts\p5\p5.min.js" />
     <Content Include="web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
   </ItemGroup>
   <ItemGroup>
     <None Include="web.Debug.config">
@@ -33,6 +33,11 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\p5.d.ts" />
+    <TypeScriptCompile Include="Test\Sketch.ts" />
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
   </PropertyGroup>
