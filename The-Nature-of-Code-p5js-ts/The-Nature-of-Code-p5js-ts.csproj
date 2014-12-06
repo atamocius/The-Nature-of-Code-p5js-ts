@@ -18,9 +18,21 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Introduction\NOC_I_06_d_Noise2D\index.html" />
+    <Content Include="Introduction\NOC_I_06_c_Noise1D\index.html" />
+    <Content Include="Introduction\NOC_I_06_b_RandomWalkNoiseStep\index.html" />
+    <Content Include="Introduction\NOC_I_06_a_NoiseWalk\index.html" />
+    <Content Include="Introduction\NOC_I_05_c_RandomWalkMonteCarloModified\index.html" />
+    <Content Include="Introduction\NOC_I_05_b_RandomWalkMonteCarlo\index.html" />
+    <Content Include="Introduction\NOC_I_05_a_RandomWalkLevyFlight\index.html" />
+    <Content Include="Introduction\NOC_I_04_c_GaussianRandomWalk\index.html" />
+    <Content Include="Introduction\NOC_I_04_b_GaussianDistributionPaintSplatter\index.html" />
+    <Content Include="Introduction\NOC_I_04_a_GaussianDistribution\index.html" />
+    <Content Include="Introduction\NOC_I_03_b_RandomWalkChanceToMoveToMouse\index.html" />
+    <Content Include="Introduction\NOC_I_03_a_RandomWalkTendsToRight\index.html" />
     <Content Include="Introduction\NOC_I_02_RandomDistribution\index.html" />
-    <Content Include="Introduction\NOC_I_01_RandomWalkImproved\index.html" />
-    <Content Include="Introduction\NOC_I_01_RandomWalk\index.html" />
+    <Content Include="Introduction\NOC_I_01_b_RandomWalkImproved\index.html" />
+    <Content Include="Introduction\NOC_I_01_a_RandomWalk\index.html" />
     <Content Include="Test\index.html" />
     <Content Include="Scripts\p5\addons\p5.dom.js" />
     <Content Include="Scripts\p5\addons\p5.sound.js" />
@@ -28,9 +40,21 @@
     <Content Include="Scripts\p5\p5.min.js" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Introduction\NOC_I_06_d_Noise2D\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_06_c_Noise1D\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_06_b_RandomWalkNoiseStep\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_06_a_NoiseWalk\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_05_c_RandomWalkMonteCarloModified\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_05_b_RandomWalkMonteCarlo\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_05_a_RandomWalkLevyFlight\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_04_c_GaussianRandomWalk\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_04_b_GaussianDistributionPaintSplatter\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_04_a_GaussianDistribution\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_03_b_RandomWalkChanceToMoveToMouse\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_03_a_RandomWalkTendsToRight\Sketch.ts" />
     <TypeScriptCompile Include="Introduction\NOC_I_02_RandomDistribution\Sketch.ts" />
-    <TypeScriptCompile Include="Introduction\NOC_I_01_RandomWalkImproved\Sketch.ts" />
-    <TypeScriptCompile Include="Introduction\NOC_I_01_RandomWalk\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_01_b_RandomWalkImproved\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_01_a_RandomWalk\Sketch.ts" />
     <TypeScriptCompile Include="Scripts\p5.d.ts" />
     <TypeScriptCompile Include="Test\Sketch.ts" />
   </ItemGroup>

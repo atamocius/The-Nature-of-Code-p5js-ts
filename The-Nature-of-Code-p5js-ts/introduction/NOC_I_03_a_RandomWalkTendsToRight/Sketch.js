@@ -1,6 +1,8 @@
-///// <reference path="../../scripts/p5.d.ts" />
-var C_I_02;
-(function (C_I_02) {
+/// <reference path="../../scripts/p5.d.ts" />
+/* tslint:disable: no-unused-variable */
+/* tslint:disable: comment-format */
+var NOC_I_03_a;
+(function (NOC_I_03_a) {
     'use strict';
     var Walker = (function () {
         function Walker(s) {
@@ -13,16 +15,26 @@ var C_I_02;
             this.s.point(this.x, this.y);
         };
         Walker.prototype.step = function () {
-            var stepx = this.s.random(-1, 1);
-            var stepy = this.s.random(-1, 1);
-            this.x += stepx;
-            this.y += stepy;
+            var r = this.s.random(1);
+            // A 40% of moving to the right!
+            if (r < 0.4) {
+                this.x++;
+            }
+            else if (r < 0.6) {
+                this.x--;
+            }
+            else if (r < 0.8) {
+                this.y++;
+            }
+            else {
+                this.y--;
+            }
             this.x = this.s.constrain(this.x, 0, this.s.width - 1);
             this.y = this.s.constrain(this.y, 0, this.s.height - 1);
         };
         return Walker;
     })();
-    C_I_02.sketch = function (s) {
+    NOC_I_03_a.sketch = function (s) {
         var walker;
         s.setup = function () {
             s.createCanvas(640, 360);
@@ -34,6 +46,6 @@ var C_I_02;
             walker.display();
         };
     };
-})(C_I_02 || (C_I_02 = {}));
-var p5_C_I_02 = new p5(C_I_02.sketch);
+})(NOC_I_03_a || (NOC_I_03_a = {}));
+var myp5 = new p5(NOC_I_03_a.sketch);
 //# sourceMappingURL=Sketch.js.map

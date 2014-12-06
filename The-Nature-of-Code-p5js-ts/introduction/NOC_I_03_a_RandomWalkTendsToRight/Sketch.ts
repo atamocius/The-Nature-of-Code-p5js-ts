@@ -1,6 +1,9 @@
 ﻿/// <reference path="../../scripts/p5.d.ts" />
 
-module C_I_01 {
+/* tslint:disable: no-unused-variable */
+/* tslint:disable: comment-format */
+
+module NOC_I_03_a {
     'use strict';
 
     class Walker {
@@ -22,15 +25,16 @@ module C_I_01 {
         }
 
         step(): void {
-            var choice: number = this.s.floor(this.s.random(4));
+            var r: number = this.s.random(1);
 
-            if (choice === 0) {
+            // A 40% of moving to the right!
+            if (r < 0.4) {
                 this.x++;
-            } else if (choice === 1) {
+            } else if (r < 0.6) { // 20% probability of moving left
                 this.x--;
-            } else if (choice === 2) {
+            } else if (r < 0.8) { // 20% probability of moving up
                 this.y++;
-            } else {
+            } else {  // 20% probability of moving down
                 this.y--;
             }
 
@@ -57,4 +61,4 @@ module C_I_01 {
 
 }
 
-var p5_C_I_01 = new p5(C_I_01.sketch);
+var myp5 = new p5(NOC_I_03_a.sketch);

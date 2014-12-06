@@ -1,5 +1,5 @@
-﻿
-declare function p5(sketch: any): void;
+﻿declare var p5: any;
+//declare function p5(sketch: any): void;
 
 ///*
 // * Environment

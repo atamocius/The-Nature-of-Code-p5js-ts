@@ -1,19 +1,24 @@
 ﻿///// <reference path="../../scripts/p5.d.ts" />
 
-module C_I_03 {
+/* tslint:disable: no-unused-variable */
+/* tslint:disable: comment-format */
+
+module NOC_I_02 {
     'use strict';
 
     export var sketch = function (s: any): void {
 
+        // An array to keep track of how often random numbers are picked
         var randomCounts: number[];
 
         s.setup = () => {
             s.createCanvas(640, 240);
-            randomCounts =
-                [0, 0, 0, 0, 0,
-                0, 0, 0, 0, 0,
-                0, 0, 0, 0, 0,
-                0, 0, 0, 0, 0];
+
+            randomCounts = new Array<number>(20);
+            // Initialize array values to 0
+            for (var i: number = 0; i < randomCounts.length; i++) {
+                randomCounts[i] = 0;
+            }
         };
 
         s.draw = () => {
@@ -35,4 +40,4 @@ module C_I_03 {
 
 }
 
-var p5_C_I_03 = new p5(C_I_03.sketch);
+var myp5 = new p5(NOC_I_02.sketch);

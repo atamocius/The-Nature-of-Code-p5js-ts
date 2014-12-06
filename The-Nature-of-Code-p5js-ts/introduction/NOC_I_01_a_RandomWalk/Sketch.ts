@@ -1,6 +1,9 @@
-﻿///// <reference path="../../scripts/p5.d.ts" />
+﻿/// <reference path="../../scripts/p5.d.ts" />
 
-module C_I_02 {
+/* tslint:disable: no-unused-variable */
+/* tslint:disable: comment-format */
+
+module NOC_I_01_a {
     'use strict';
 
     class Walker {
@@ -22,17 +25,25 @@ module C_I_02 {
         }
 
         step(): void {
-            var stepx: number = this.s.random(-1, 1);
-            var stepy: number = this.s.random(-1, 1);
-            this.x += stepx;
-            this.y += stepy;
+            // 0, 1, 2, or 3
+            var choice: number = this.s.floor(this.s.random(4));
+
+            if (choice === 0) {
+                this.x++;
+            } else if (choice === 1) {
+                this.x--;
+            } else if (choice === 2) {
+                this.y++;
+            } else {
+                this.y--;
+            }
 
             this.x = this.s.constrain(this.x, 0, this.s.width - 1);
             this.y = this.s.constrain(this.y, 0, this.s.height - 1);
         }
     }
 
-    export var sketch = function (s: any): void {
+    export var sketch = function(s: any): void {
 
         var walker: Walker;
 
@@ -50,4 +61,4 @@ module C_I_02 {
 
 }
 
-var p5_C_I_02 = new p5(C_I_02.sketch);
+var myp5 = new p5(NOC_I_01_a.sketch);
