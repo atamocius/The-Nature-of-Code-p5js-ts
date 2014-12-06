@@ -1,53 +1,35 @@
 /// <reference path="../scripts/p5.d.ts" />
-//function setup(): void {
-//    createCanvas(640, 480);
-//}
-//function draw(): void {
-//    if (mouseIsPressed) {
-//        fill(0);
-//    } else {
-//        fill(255);
-//    }
-//    ellipse(mouseX, mouseY, 80, 80);
-//}
 var Test;
 (function (_Test) {
+    'use strict';
     var Test = (function () {
-        function Test() {
+        function Test(s) {
+            this.s = s;
         }
         Test.prototype.setup = function () {
-            createCanvas(640, 480);
+            this.s.createCanvas(640, 480);
         };
         Test.prototype.draw = function () {
-            if (mouseIsPressed) {
-                fill(0);
+            if (this.s.mouseIsPressed) {
+                this.s.fill(0);
             }
             else {
-                fill(255);
+                this.s.fill(255);
             }
-            ellipse(mouseX, mouseY, 80, 80);
+            this.s.ellipse(this.s.mouseX, this.s.mouseY, 80, 80);
         };
         return Test;
     })();
-    //var t: Test = new Test();
-    //function setup(): void {
-    //    t.setup();
-    //}
-    //function draw(): void {
-    //    t.draw();
-    //}
-    var Sketch = (function () {
-        function Sketch() {
-            this.t = new Test();
-        }
-        Sketch.prototype.setup = function () {
-            this.t.setup();
+    _Test.sketch = function (s) {
+        var t;
+        s.setup = function () {
+            t = new Test(s);
+            t.setup();
         };
-        Sketch.prototype.draw = function () {
-            this.t.draw();
+        s.draw = function () {
+            t.draw();
         };
-        return Sketch;
-    })();
-    _Test.Sketch = Sketch;
+    };
 })(Test || (Test = {}));
+var p5_Test = new p5(Test.sketch);
 //# sourceMappingURL=Sketch.js.map

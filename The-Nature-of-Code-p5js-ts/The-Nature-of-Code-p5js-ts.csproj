@@ -18,9 +18,9 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="introduction\C_I_03 Random Distribution\index.html" />
-    <Content Include="introduction\C_I_02 Random Walker Improved\index.html" />
-    <Content Include="introduction\C_I_01 Random Walker\index.html" />
+    <Content Include="Introduction\NOC_I_02_RandomDistribution\index.html" />
+    <Content Include="Introduction\NOC_I_01_RandomWalkImproved\index.html" />
+    <Content Include="Introduction\NOC_I_01_RandomWalk\index.html" />
     <Content Include="Test\index.html" />
     <Content Include="Scripts\p5\addons\p5.dom.js" />
     <Content Include="Scripts\p5\addons\p5.sound.js" />
@@ -28,9 +28,9 @@
     <Content Include="Scripts\p5\p5.min.js" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="introduction\C_I_03 Random Distribution\Sketch.ts" />
-    <TypeScriptCompile Include="introduction\C_I_02 Random Walker Improved\Sketch.ts" />
-    <TypeScriptCompile Include="introduction\C_I_01 Random Walker\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_02_RandomDistribution\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_01_RandomWalkImproved\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_01_RandomWalk\Sketch.ts" />
     <TypeScriptCompile Include="Scripts\p5.d.ts" />
     <TypeScriptCompile Include="Test\Sketch.ts" />
   </ItemGroup>

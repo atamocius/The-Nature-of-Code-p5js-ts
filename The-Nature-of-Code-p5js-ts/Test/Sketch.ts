@@ -1,53 +1,42 @@
 ﻿/// <reference path="../scripts/p5.d.ts" />
 
-//function setup(): void {
-//    createCanvas(640, 480);
-//}
-
-//function draw(): void {
-//    if (mouseIsPressed) {
-//        fill(0);
-//    } else {
-//        fill(255);
-//    }
-//    ellipse(mouseX, mouseY, 80, 80);
-//}
-
 module Test {
+    'use strict';
+
     class Test {
+        private s: any;
+
+        constructor(s: any) {
+            this.s = s;
+        }
+
         setup(): void {
-            createCanvas(640, 480);
+            this.s.createCanvas(640, 480);
         }
 
         draw(): void {
-            if (mouseIsPressed) {
-                fill(0);
+            if (this.s.mouseIsPressed) {
+                this.s.fill(0);
             } else {
-                fill(255);
+                this.s.fill(255);
             }
-            ellipse(mouseX, mouseY, 80, 80);
+            this.s.ellipse(this.s.mouseX, this.s.mouseY, 80, 80);
         }
     }
 
-    //var t: Test = new Test();
+    export var sketch = function (s: any): void {
 
-    //function setup(): void {
-    //    t.setup();
-    //}
+        var t: Test;
 
-    //function draw(): void {
-    //    t.draw();
-    //}
+        s.setup = () => {
+            t = new Test(s);
+            t.setup();
+        };
 
-    export class Sketch {
-        t: Test = new Test();
-
-        setup(): void {
-            this.t.setup();
-        }
-
-        draw(): void {
-            this.t.draw();
-        }
-    }
+        s.draw = () => {
+            t.draw();
+        };
+    };
 }
+
+var p5_Test = new p5(Test.sketch);
